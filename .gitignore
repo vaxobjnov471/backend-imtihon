@@ -1,0 +1,55 @@
+# Dependencies (Kutubxonalar)
+node_modules/
+jspm_packages/
+web_modules/
+
+# Environment variables (Maxfiy kalitlar va sozlamalar)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+
+# Logs (Tizim qaydlari)
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Diagnostic reports (Xatolik hisobotlari)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime data (Kesh va vaqtinchalik fayllar)
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Directory for instrumentavy coverage scripts (Test natijalari)
+lib-cov
+coverage
+*.lcov
+.nyc_output
+
+# Compiled files (Agar TypeScript yoki Babel ishlatilsa)
+dist/
+build/
+out/
+.next/
+.nuxt/
+
+# IDE and Editors (Dasturlash muhiti sozlamalari)
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS generated files (Operatsion tizim fayllari)
+.DS_Store
+Thumbs.db
