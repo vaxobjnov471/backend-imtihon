@@ -88,7 +88,7 @@ const deleteLang = async (req, res) =>{
     try {
         const langId = req.params.id
 
-    const deteleLang =  await Lang.findByIdAndDelete(langId)
+    const deleteLang =  await Lang.findByIdAndDelete(langId)
         if (!deleteLang) {
             return res.status(404).json({ message: "Lang not faund"})
 

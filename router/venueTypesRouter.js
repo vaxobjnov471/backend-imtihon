@@ -1,7 +1,7 @@
 const { Router } = require('express');
 const venue_types = Router();
 
-const {postVenueTypes, getStuff_RoleById,getVenueTypes,deleteVenueTypes
+const {postVenueTypes, getVenueTypesById,getVenueTypes,deleteVenueTypes
 } = require("../controller/venueTypes.controller")
 
 const validateSchema = (schema) => (req,res,next) => {
@@ -96,7 +96,7 @@ venue_types.get("/getVenue_Types", getVenueTypes);
  *       '500':
  *         description: Server xatosi
  */
-venue_types.get("/getVenue_TypesById/:id", getStuff_RoleById);
+venue_types.get("/getVenue_TypesById/:id", getVenueTypesById);
 
 
 /**

@@ -45,11 +45,11 @@ const createTicket_status = async (req,res) => {
 
 const getTicket_status  =  async (req, res) => {
      try {
-            const Ticket_status = await Ticket_status.find({})
+            const ticket_status = await Ticket_status.find({})
             res.json({
                 success: true,
                 message: "Barcha ismlar ro'yxxatga olingan",
-                innerData: Ticket_status,
+                innerData: ticket_status,
             })
         }catch (error) {
             console.error("Error fetching Ticket_status:", error)
@@ -65,9 +65,9 @@ const getTicket_status  =  async (req, res) => {
 
 const getTicket_statusById = async (req,res) => {
     try {
-        const Ticket_statusId =  req.params.id;
+        const ticket_statusId =  req.params.id;
 
-        const ticket_status = await Ticket_status.findById(Ticket_statusId)
+        const ticket_status = await Ticket_status.findById(ticket_statusId)
 
         if (!ticket_status) {
             return res.status(404).json({ message: "Ticket_status not faund"})
@@ -88,7 +88,7 @@ const deleteTicket_status = async (req, res) =>{
     try {
         const Ticket_statusId = req.params.id
 
-    const deteleTicket_status =  await Ticket_status.findByIdAndDelete(Ticket_statusId)
+    const deleteTicket_status =  await Ticket_status.findByIdAndDelete(Ticket_statusId)
         if (!deleteTicket_status) {
             return res.status(404).json({ message: "Ticket_status not faund"})
 

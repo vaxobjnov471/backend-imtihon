@@ -94,7 +94,7 @@ const deleteHuman_category = async (req, res) =>{
     try {
         const human_categoryId = req.params.id
 
-    const deteleHuman_category =  await Human.findByIdAndDelete(human_categoryId)
+    const deleteHuman_category =  await Human.findByIdAndDelete(human_categoryId)
         if (!deleteHuman_category) {
             return res.status(404).json({ message: "Human_category not faund"})
 

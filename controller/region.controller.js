@@ -88,7 +88,7 @@ const deleteRegion = async (req, res) =>{
     try {
         const regionId = req.params.id
 
-    const deteleRegion =  await Region.findByIdAndDelete(regionId)
+    const deleteRegion =  await Region.findByIdAndDelete(regionId)
         if (!deleteRegion) {
             return res.status(404).json({ message: "Region not faund"})
 

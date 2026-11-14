@@ -104,7 +104,7 @@ const deleteCustomer = async (req, res) =>{
     try {
         const customerId = req.params.id
 
-    const deteleCustomer =  await Customer.findByIdAndDelete(customerId)
+    const deleteCustomer =  await Customer.findByIdAndDelete(customerId)
         if (!deleteCustomer) {
             return res.status(404).json({ message: "Customer not faund"})
 

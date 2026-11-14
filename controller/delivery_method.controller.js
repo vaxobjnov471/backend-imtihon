@@ -67,7 +67,7 @@ const getDelivery_methodById = async (req,res) => {
     try {
         const delivery_methodId =  req.params.id;
 
-        const delivery_method = await Delivery_method.findById(typesId)
+        const delivery_method = await Delivery_method.findById(delivery_methodId)
 
         if (!delivery_method) {
             return res.status(404).json({ message: "Delivery_method not faund"})
@@ -88,7 +88,7 @@ const deleteDelivery_method = async (req, res) =>{
     try {
         const Delivery_methodId = req.params.id
 
-    const deteleDelivery_method =  await Delivery_method.findByIdAndDelete(Delivery_methodId)
+    const deleteDelivery_method =  await Delivery_method.findByIdAndDelete(Delivery_methodId)
         if (!deleteDelivery_method) {
             return res.status(404).json({ message: "Types not faund"})
 

@@ -102,7 +102,7 @@ const deleteCustomer_cart = async (req, res) =>{
     try {
         const customer_cartId = req.params.id
 
-    const deteleCustomer_cart =  await Customer_cart.findByIdAndDelete(customer_cartId)
+    const deleteCustomer_cart =  await Customer_cart.findByIdAndDelete(customer_cartId)
         if (!deleteCustomer_cart) {
             return res.status(404).json({ message: "Customer_cart not faund"})
 

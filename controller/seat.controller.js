@@ -98,7 +98,7 @@ const deleteSeat = async (req, res) =>{
     try {
         const seatId = req.params.id
 
-    const deteleSeat =  await Seat.findByIdAndDelete(seatId)
+    const deleteSeat =  await Seat.findByIdAndDelete(seatId)
         if (!deleteSeat) {
             return res.status(404).json({ message: "Seat not faund"})
 

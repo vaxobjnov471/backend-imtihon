@@ -110,7 +110,7 @@ const deleteEvent = async (req, res) =>{
     try {
         const eventId = req.params.id
 
-    const deteleEvent =  await Event.findByIdAndDelete(eventId)
+    const deleteEvent =  await Event.findByIdAndDelete(eventId)
         if (!deleteEvent) {
             return res.status(404).json({ message: "Event not faund"})
 

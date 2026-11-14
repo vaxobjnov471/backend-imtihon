@@ -41,11 +41,11 @@ const postVenueTypes = async (req, res) => {
 
 const getVenueTypes = async (req, res) => {
     try {
-        const VenueTypes = await VenueTypes.find({});
+        const venueTypes = await VenueTypes.find({});
         res.json({
             success: true,
             message: 'barcha Id royxati olingan',
-            innerData: VenueTypes
+            innerData: venueTypes
         });
     } catch (error) {
         console.error("Error fetching Id:", error);
@@ -59,11 +59,11 @@ const getVenueTypes = async (req, res) => {
 
 // ---------------- getVenueTypesById---------
 
-const getStuff_RoleById = async (req, res) => {
+const getVenueTypesById = async (req, res) => {
     try {
-        const VenueTypesId = req.params.id;
+        const venueTypesId = req.params.id;
 
-        const venueTypes = await VenueTypes.findById(VenueTypesId).populate("types_id, venue_id")
+        const venueTypes = await VenueTypes.findById(venueTypesId).populate("types_id, venue_id")
 
         if (!venueTypes) {
             return res.status(404).json({ message: "VenueTypes not faund" });
@@ -95,4 +95,4 @@ const deleteVenueTypes = async (req, res) => {
        
 };
 
-module.exports = {postVenueTypes, getStuff_RoleById,getVenueTypes,deleteVenueTypes}
+module.exports = {postVenueTypes, getVenueTypesById,getVenueTypes,deleteVenueTypes}
