@@ -12,5 +12,5 @@ const customer_cardSchema = new Schema({
     is_main: { type: Boolean, },
 })  
 
-const Customer_card = model('customer_card', customer_cardSchema)
-module.exports = { Customer_card }
+const Customer_cart = model('customer_card', customer_cardSchema)
+module.exports = { Customer_cart }

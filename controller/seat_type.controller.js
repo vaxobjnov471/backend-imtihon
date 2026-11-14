@@ -67,13 +67,13 @@ const getSeat_TypeById = async (req,res) => {
     try {
         const Seat_TypeId =  req.params.id;
 
-        const Seat_Type = await Seat_Type.findById(Seat_TypeId)
+        const seat_Type = await Seat_Type.findById(Seat_TypeId)
 
         if (!Seat_Type) {
             return res.status(404).json({ message: "Seat_Type not faund"})
 
         }
-        return res.status(200).json({message: "Seat_Type faund", Seat_Type})
+        return res.status(200).json({message: "Seat_Type faund", seat_Type})
 
     }catch(error) {
         console.error(error);

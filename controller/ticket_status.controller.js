@@ -67,13 +67,13 @@ const getTicket_statusById = async (req,res) => {
     try {
         const Ticket_statusId =  req.params.id;
 
-        const Ticket_status = await Ticket_status.findById(Ticket_statusId)
+        const ticket_status = await Ticket_status.findById(Ticket_statusId)
 
-        if (!Ticket_status) {
+        if (!ticket_status) {
             return res.status(404).json({ message: "Ticket_status not faund"})
 
         }
-        return res.status(200).json({message: "Ticket_status faund", Ticket_status})
+        return res.status(200).json({message: "Ticket_status faund", ticket_status})
 
     }catch(error) {
         console.error(error);

@@ -67,7 +67,7 @@ const getcart_ItemById = async (req,res) => {
     try {
         const cart_ItemId =  req.params.id;
 
-        const cart_Item = await cart_Item.findById(cart_ItemId).populate("cart_id").populate("ticket_id")
+        const cart_Item = await cart_Item.findById(cart_ItemId).populate("cart_id ticket_id")
 
         if (!cart_Item) {
             return res.status(404).json({ message: "CartItem topilmadi"})

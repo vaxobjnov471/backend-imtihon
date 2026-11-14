@@ -15,8 +15,8 @@ const postVenueTypes = async (req, res) => {
             })
         }else {
             const newVenueTypes = new VenueTypes({
-                role_id,
-                stuff_id,
+                venue_id,
+                types_id
             })
             await newVenueTypes.save();
 
@@ -63,12 +63,12 @@ const getStuff_RoleById = async (req, res) => {
     try {
         const VenueTypesId = req.params.id;
 
-        const VenueTypes = await VenueTypes.findById(VenueTypesId).populate("types_id, venue_id")
+        const venueTypes = await VenueTypes.findById(VenueTypesId).populate("types_id, venue_id")
 
-        if (!VenueTypes) {
+        if (!venueTypes) {
             return res.status(404).json({ message: "VenueTypes not faund" });
         }
-        return res.status(200).json({ message: "VenueTypes faund", VenueTypes });
+        return res.status(200).json({ message: "VenueTypes faund", venueTypes });
 
     } catch (error) {
         console.error(error);

@@ -123,8 +123,6 @@ const updateVenue = async (req,res)=> {
             site,
             phone,
             geometry,
-            region_id,
-            destrict_id,
         } = req.body;
         const updateData = {
             name,
@@ -133,8 +131,6 @@ const updateVenue = async (req,res)=> {
             site,
             phone,
             geometry,
-            region_id,
-            destrict_id,
         }
         const updatedVenue = await Venue.findByIdAndUpdate(id, updateData, {
             new: true,
