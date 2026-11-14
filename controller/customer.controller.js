@@ -68,7 +68,7 @@ const getCustomer  =  async (req, res) => {
                 innerData: customer,
             })
         }catch (error) {
-            console,error("Error fetching customer:", error)
+            console.error("Error fetching customer:", error)
             res.status(500).json({
                 success: false,
                 message: 'Serverda xatosi customer olishda  xatolik yuz berdi'

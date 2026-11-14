@@ -53,7 +53,7 @@ const getCart  =  async (req, res) => {
                 innerData: cart,
             })
         }catch (error) {
-            console,error("Error fetching cart:", error)
+            console.error("Error fetching cart:", error)
             res.status(500).json({
                 success: false,
                 message: 'Serverda xatosi cart olishda  xatolik yuz berdi'

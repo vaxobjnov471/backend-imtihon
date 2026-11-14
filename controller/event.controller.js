@@ -74,7 +74,7 @@ const getEvent  =  async (req, res) => {
                 innerData: event,
             })
         }catch (error) {
-            console,error("Error fetching event:", error)
+            console.error("Error fetching event:", error)
             res.status(500).json({
                 success: false,
                 message: 'Serverda xatosi event olishda  xatolik yuz berdi'

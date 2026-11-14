@@ -52,7 +52,7 @@ const getPayment_method  =  async (req, res) => {
                 innerData: payment_method,
             })
         }catch (error) {
-            console,error("Error fetching Payment_method:", error)
+            console.error("Error fetching Payment_method:", error)
             res.status(500).json({
                 success: false,
                 message: 'Serverda xatosi ism olishda  xatolik yuz berdi'
@@ -88,7 +88,7 @@ const deletePayment_method = async (req, res) =>{
     try {
         const payment_methodId = req.params.id
 
-    const detelePayment_method =  await Payment_method.findByIdAndDelete(payment_methodId)
+    const deletePayment_method =  await Payment_method.findByIdAndDelete(payment_methodId)
         if (!deletePayment_method) {
             return res.status(404).json({ message: "Payment_method not faund"})
 

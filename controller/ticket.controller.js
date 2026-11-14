@@ -62,7 +62,7 @@ const getTicket  =  async (req, res) => {
                 innerData: ticket,
             })
         }catch (error) {
-            console,error("Error fetching ticket:", error)
+            console.error("Error fetching ticket:", error)
             res.status(500).json({
                 success: false,
                 message: 'Serverda xatosi ticket olishda  xatolik yuz berdi'
@@ -98,7 +98,7 @@ const deleteTicket = async (req, res) =>{
     try {
         const ticketId = req.params.id
 
-    const deteleTicket =  await Ticket.findByIdAndDelete(ticketId)
+    const deleteTicket =  await Ticket.findByIdAndDelete(ticketId)
         if (!deleteTicket) {
             return res.status(404).json({ message: "Ticket not faund"})
 

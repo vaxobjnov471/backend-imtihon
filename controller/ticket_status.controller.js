@@ -52,7 +52,7 @@ const getTicket_status  =  async (req, res) => {
                 innerData: Ticket_status,
             })
         }catch (error) {
-            console,error("Error fetching Ticket_status:", error)
+            console.error("Error fetching Ticket_status:", error)
             res.status(500).json({
                 success: false,
                 message: 'Serverda xatosi ism olishda  xatolik yuz berdi'

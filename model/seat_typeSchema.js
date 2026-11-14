@@ -1,7 +1,7 @@
 const { Schema, model } = require('mongoose')
 
 const seat_typeSchema = new Schema ({
-    name: {type: String, require: true}
+    name: {type: String, required: true}
 })
 
 const Seat_Type = model('seat_type', seat_typeSchema)

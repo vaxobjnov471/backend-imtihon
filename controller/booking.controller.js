@@ -61,7 +61,7 @@ const getBooking  =  async (req, res) => {
                 innerData: booking,
             })
         }catch (error) {
-            console,error("Error fetching booking:", error)
+            console.error("Error fetching booking:", error)
             res.status(500).json({
                 success: false,
                 message: 'Serverda xatosi booking olishda  xatolik yuz berdi'
@@ -93,11 +93,12 @@ const getBookingById = async (req,res) => {
 
 // ------- delete Booking ------
 
+
 const deleteBooking = async (req, res) =>{
     try {
         const bookingId = req.params.id
 
-    const deteleBooking =  await Booking.findByIdAndDelete(bookingId)
+    const deleteBooking =  await Booking.findByIdAndDelete(bookingId)
         if (!deleteBooking) {
             return res.status(404).json({ message: "Booking not faund"})
 

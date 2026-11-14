@@ -45,7 +45,7 @@ const createcart_Item = async (req,res) => {
 
 const getcart_Item  =  async (req, res) => {
      try {
-            const cart_Item = await cart_Item.find({}).populate("cart_id").populate("ticket_id")
+            const cart_Item = await cart_Item.find({})
             res.json({
                 success: true,
                 message: "Barcha CartItem ro'yxati olindi",

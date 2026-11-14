@@ -52,7 +52,7 @@ const getRegion  =  async (req, res) => {
                 innerData: region,
             })
         }catch (error) {
-            console,error("Error fetching Region:", error)
+            console.error("Error fetching Region:", error)
             res.status(500).json({
                 success: false,
                 message: 'Serverda xatosi ism olishda  xatolik yuz berdi'

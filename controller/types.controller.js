@@ -52,7 +52,7 @@ const getTypes  =  async (req, res) => {
                 innerData: types,
             })
         }catch (error) {
-            console,error("Error fetching types:", error)
+            console.error("Error fetching types:", error)
             res.status(500).json({
                 success: false,
                 message: 'Serverda xatosi ism olishda  xatolik yuz berdi'
@@ -88,7 +88,7 @@ const deleteTypes = async (req, res) =>{
     try {
         const typesId = req.params.id
 
-    const deteleTypes =  await Types.findByIdAndDelete(typesId)
+    const deleteTypes =  await Types.findByIdAndDelete(typesId)
         if (!deleteTypes) {
             return res.status(404).json({ message: "Types not faund"})
 

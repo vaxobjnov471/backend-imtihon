@@ -52,7 +52,7 @@ const getDelivery_method  =  async (req, res) => {
                 innerData: delivery_method,
             })
         }catch (error) {
-            console,error("Error fetching types:", error)
+            console.error("Error fetching types:", error)
             res.status(500).json({
                 success: false,
                 message: 'Serverda xatosi ism olishda  xatolik yuz berdi'

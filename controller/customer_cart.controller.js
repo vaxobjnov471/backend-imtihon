@@ -66,7 +66,7 @@ const getCustomer_cart  =  async (req, res) => {
                 innerData: customer_cart,
             })
         }catch (error) {
-            console,error("Error fetching customer_cart:", error)
+            console.error("Error fetching customer_cart:", error)
             res.status(500).json({
                 success: false,
                 message: 'Serverda xatosi customer_cart olishda  xatolik yuz berdi'

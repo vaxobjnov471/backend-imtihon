@@ -62,7 +62,7 @@ const getSeat  =  async (req, res) => {
                 innerData: seat,
             })
         }catch (error) {
-            console,error("Error fetching seat:", error)
+            console.error("Error fetching seat:", error)
             res.status(500).json({
                 success: false,
                 message: 'Serverda xatosi seat olishda  xatolik yuz berdi'

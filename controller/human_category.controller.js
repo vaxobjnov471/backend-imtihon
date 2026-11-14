@@ -58,7 +58,7 @@ const getHuman_category  =  async (req, res) => {
                 innerData: human_category,
             })
         }catch (error) {
-            console,error("Error fetching human_category:", error)
+            console.error("Error fetching human_category:", error)
             res.status(500).json({
                 success: false,
                 message: 'Serverda xatosi human_category olishda  xatolik yuz berdi'

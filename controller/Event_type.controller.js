@@ -54,7 +54,7 @@ const getEvent_type  =  async (req, res) => {
                 innerData: event_type,
             })
         }catch (error) {
-            console,error("Error fetching Event_type:", error)
+            console.error("Error fetching Event_type:", error)
             res.status(500).json({
                 success: false,
                 message: 'Serverda xatosi ism olishda  xatolik yuz berdi'
@@ -90,7 +90,7 @@ const deleteEvent_type = async (req, res) =>{
     try {
         const event_typeId = req.params.id
 
-    const deteleEvent_type =  await Event_type.findByIdAndDelete(event_typeId)
+    const deleteEvent_type =  await Event_type.findByIdAndDelete(event_typeId)
         if (!deleteEvent_type) {
             return res.status(404).json({ message: "Event_type not faund"})
 

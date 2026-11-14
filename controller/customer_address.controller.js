@@ -70,7 +70,7 @@ const getCustomer_address  =  async (req, res) => {
                 innerData: customer_address,
             })
         }catch (error) {
-            console,error("Error fetching customer_address:", error)
+            console.error("Error fetching customer_address:", error)
             res.status(500).json({
                 success: false,
                 message: 'Serverda xatosi customer_address olishda  xatolik yuz berdi'

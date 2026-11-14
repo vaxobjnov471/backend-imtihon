@@ -52,7 +52,7 @@ const getSeat_Type  =  async (req, res) => {
                 innerData: seat_type,
             })
         }catch (error) {
-            console,error("Error fetching Seat_Type:", error)
+            console.error("Error fetching Seat_Type:", error)
             res.status(500).json({
                 success: false,
                 message: 'Serverda xatosi ism olishda  xatolik yuz berdi'
