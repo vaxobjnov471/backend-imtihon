@@ -6,7 +6,7 @@ const postVenueTypes = async (req, res) => {
             venue_id,
             types_id,
         } = req.body;
-        const existingVenueTypes = await VenueTypes.findOne({ venue_id, types_id});
+        const existingVenueTypes = await VenueTypes.findOne({ venue_id, types_id });
         console.log(existingVenueTypes)
         if (existingVenueTypes) {
             return res.status(400).json({
@@ -63,7 +63,7 @@ const getVenueTypesById = async (req, res) => {
     try {
         const venueTypesId = req.params.id;
 
-        const venueTypes = await VenueTypes.findById(venueTypesId).populate("types_id, venue_id")
+        const venueTypes = await VenueTypes.findById(venueTypesId).populate("types_id  venue_id")
 
         if (!venueTypes) {
             return res.status(404).json({ message: "VenueTypes not faund" });
