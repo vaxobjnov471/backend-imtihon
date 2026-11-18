@@ -67,13 +67,13 @@ const getcart_ItemById = async (req,res) => {
     try {
         const cart_ItemId =  req.params.id;
 
-        const cart_Item = await cart_Item.findById(cart_ItemId).populate("cart_id ticket_id")
+        const cart_item = await cart_Item.findById(cart_ItemId).populate("cart_id ticket_id")
 
-        if (!cart_Item) {
+        if (!cart_item) {
             return res.status(404).json({ message: "CartItem topilmadi"})
 
         }
-        return res.status(200).json({message: "CartItem topildi", cart_Item})
+        return res.status(200).json({message: "CartItem topildi", cart_item})
 
     }catch(error) {
         console.error(error);
@@ -93,7 +93,7 @@ const deletecart_Item = async (req, res) =>{
             return res.status(404).json({ message: "CartItem topilmadi"})
 
         }
-        res.json({message: "CartItem muvaffaqiyatli o'chirildi", cart_Item: deletedcart_Item})
+        res.json({message: "CartItem muvaffaqiyatli o'chirildi", cart_item: deletedcart_Item})
     }catch (error) {
         console.error(error);
         res.status(500).json({ message: "Internal Server Error"})

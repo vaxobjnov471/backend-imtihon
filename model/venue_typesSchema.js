@@ -4,8 +4,8 @@ const { Types } = require('./typesSchema')
 
 
 const venueTypes = new Schema({
-    venue_id: {type: Schema.Types.ObjectId, ref: Venue},
-    types_id: {type: Schema.Types.ObjectId, ref: Types},
+    venue_id: {type: Schema.Types.ObjectId, ref: Venue, default: null },
+    types_id: {type: Schema.Types.ObjectId, ref: Types, default: null },
 })
 
 const VenueTypes  = model('venueTypes', venueTypes)
